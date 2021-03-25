@@ -1,0 +1,57 @@
+.home{
+    .menu-list{
+        width: 180px;
+        position: fixed;
+        // 高度占据视口的一般
+        height: 100%;
+        .ant-menu{
+            height: 100%;
+        }
+    }
+    // &代表当前元素
+    .main-app{
+        // 把左侧区域让出来
+        margin-left:180px ;
+        transition: all 0.3s;
+        &.menu-unfold{
+            margin-left: 80px;
+        }
+        // 头部吊顶区域
+        .main-header{
+            height: 50px;
+            line-height: 50px;
+            border-bottom: 1px solid #eee;
+            padding-left: 10px;
+            padding-right: 20px;
+            .breadcrumb{
+                display: inline-block;
+                margin-left: 20px;
+            }
+            .user-info{
+                float: right;
+                cursor: pointer;
+                text-align: center;
+                // 他不是第一个li
+                li:not(:first-child){
+                    display: none;
+                    &:hover{
+                        background-color:#eee;
+                        color: 999;
+                        font-weight: 700;
+                    }
+                }
+                li{
+                    padding: 0 30px;
+                }
+                // 鼠标移入的时候，下面所有的值都显示
+                &:hover{
+                    li{
+                        display: block;
+                    }
+                }   
+            }
+        }
+    }
+  
+    
+}
